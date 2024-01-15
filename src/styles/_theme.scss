@@ -1,0 +1,11 @@
+.ec-light-theme {
+  @include theme-variables($light-theme-colors);
+  @include dynamic-background($light-theme-colors);
+  @include dynamic-text($light-theme-colors);
+}
+
+.ec-dark-theme {
+  @include theme-variables($dark-theme-colors);
+  @include dynamic-background($dark-theme-colors);
+  @include dynamic-text($dark-theme-colors);
+}

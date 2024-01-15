@@ -1,0 +1,80 @@
+.ec-toggle {
+  display: flex;
+
+  button {
+    height: 36px;
+    width: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    background-color: var(--ec-color-cta);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:first-child {
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0px;
+        width: 1px;
+        height: 100%;
+        background-color: var(--ec-color-neutral);
+        opacity: 1;
+      }
+    }
+
+    &:last-child {
+      border-top-right-radius: 16px;
+      border-bottom-right-radius: 16px;
+    }
+
+    &:hover {
+      background-color: var(--ec-color-cta);
+    }
+
+    span {
+      position: relative;
+      top: -2px;
+    }
+  }
+
+  .ec-light-theme & {
+    button {
+      &:first-child {
+        background-color: var(--ec-color-cta);
+      }
+
+      &:last-child {
+        opacity: 0.3;
+
+        &:hover {
+          background-color: var(--ec-color-background);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .ec-dark-theme & {
+    button {
+      &:first-child {
+        opacity: 0.3;
+
+        &:hover {
+          background-color: var(--ec-color-background);
+          opacity: 1;
+        }
+      }
+
+      &:last-child {
+        background-color: var(--ec-color-cta);
+      }
+    }
+  }
+}

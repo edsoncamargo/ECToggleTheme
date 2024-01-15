@@ -1,0 +1,10 @@
+.ec-navbar {
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--ec-color-foreground);
+  padding: 24px;
+  box-sizing: border-box;
+}

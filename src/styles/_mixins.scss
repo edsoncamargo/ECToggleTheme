@@ -1,0 +1,27 @@
+@mixin theme-variables($colors) {
+  @each $color in $colors {
+    $name: nth($color, 1);
+    $value: nth($color, 2);
+    --ec-color-#{$name}: #{$value};
+  }
+}
+
+@mixin dynamic-background($colors) {
+  @each $name, $color in $colors {
+    &.ec-bg-#{$name},
+    & > .ec-bg-#{$name},
+    .ec-bg-#{$name} {
+      background-color: $color;
+    }
+  }
+}
+
+@mixin dynamic-text($colors) {
+  @each $name, $color in $colors {
+    &.ec-text-#{$name},
+    & > .ec-text-#{$name},
+    .ec-text-#{$name} {
+      color: $color;
+    }
+  }
+}
